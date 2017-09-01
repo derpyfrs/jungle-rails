@@ -1,7 +1,7 @@
 <h1>Signup!</h1>
 
 <%= form_for :user, url: '/users' do |f| %>
-
+  User_Name: <%= f.text_field :user %>
   First_Name: <%= f.text_field :first_name %>
   Last_Name: <%= f.text_field :last_name %>
   Email: <%= f.text_field :email %>

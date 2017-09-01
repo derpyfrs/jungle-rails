@@ -13,6 +13,7 @@ Rails.application.routes.draw do
     post '/users' => 'users#create'
 
 
+
   resource :cart, only: [:show] do
     put    :add_item
     delete :remove_item
