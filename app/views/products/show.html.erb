@@ -24,17 +24,21 @@
           <dd><%= @product.price %></dd>
         </dl>
         <div>
-          <table>
+          <table border='1px'>
             <thead>
               <tr>
-                <th>rating number |</th>
-                <th>rating review |</th>
+                <th>rating</th>
+                <th>review</th>
                 <th>username</th>
               </tr>
             </thead>
-
-            <%= @product.reviews.first.description %>
-
+            <% @product.reviews.each do |review| %>
+              <tr>
+                <td> <%= review.rating %> </td>
+                <td> <%= review.description %> </td>
+                <td> <%= review.user_id %> </td>
+              </tr>
+            <% end %>
           </table>
         </div>
       </div>
