@@ -132,5 +132,38 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+cat1.reviews.create!({
+  product_id: 1,
+  user_id: 2,
+  description: "omg its too much funz",
+  rating: 5,
+  created_at: Datetime.now
+})
+
+cat3.reviews.create!({
+  product_id: 2,
+  user_id: 3,
+  description: "You'd be a fool not to own one",
+  rating: 5,
+  created_at: Datetime.now
+})
+
+cat2.reviews.create!({
+  product_id: 3,
+  user_id: 3,
+  description: "not enough pylons",
+  rating: 3,
+  created_at: Datetime.now
+})
+
+cat2.reviews.create!({
+  product_id: 1,
+  user_id: 1,
+  description: "It does it job? Sorta..",
+  rating: 2,
+  created_at: Datetime.now
+})
+
+
 
 puts "DONE!"
