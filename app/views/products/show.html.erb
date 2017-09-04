@@ -15,7 +15,7 @@
       <div class="col-sm-8">
         <dl class="dl-horizontal">
           <dt>Name</dt>
-          <dd><%= @product.name %></dd>
+          <dd><%= @product.id %></dd>
           <dt>Description</dt>
           <dd><%= @product.description %></dd>
           <dt>Quantity</dt>
@@ -25,9 +25,16 @@
         </dl>
         <div>
           <table>
-            rating number
-            rating review
-            username
+            <thead>
+              <tr>
+                <th>rating number |</th>
+                <th>rating review |</th>
+                <th>username</th>
+              </tr>
+            </thead>
+
+            <%= @product.reviews.first.description %>
+
           </table>
         </div>
       </div>
